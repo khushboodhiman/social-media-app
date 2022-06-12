@@ -66,7 +66,7 @@ class _LandingState extends State<Landing> {
                       begin: Alignment.topRight,
                       end: Alignment.bottomLeft,
                       colors: [
-                        Theme.of(context).accentColor,
+                        Theme.of(context).colorScheme.secondary,
                         Color(0xff597FDB),
                       ],
                     ),
@@ -97,7 +97,7 @@ class _LandingState extends State<Landing> {
                       begin: Alignment.topRight,
                       end: Alignment.bottomLeft,
                       colors: [
-                        Theme.of(context).accentColor,
+                        Theme.of(context).colorScheme.secondary,
                         Color(0xff597FDB),
                       ],
                     ),

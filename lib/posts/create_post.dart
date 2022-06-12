@@ -57,7 +57,7 @@ class _CreatePostState extends State<CreatePost> {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 15.0,
-                      color: Theme.of(context).accentColor,
+                      color: Theme.of(context).colorScheme.secondary,
                     ),
                   ),
                 ),
@@ -101,7 +101,7 @@ class _CreatePostState extends State<CreatePost> {
                       Radius.circular(5.0),
                     ),
                     border: Border.all(
-                      color: Theme.of(context).accentColor,
+                      color: Theme.of(context).colorScheme.secondary,
                     ),
                   ),
                   child: viewModel.imgLink != null
@@ -116,7 +116,8 @@ class _CreatePostState extends State<CreatePost> {
                               child: Text(
                                 'Upload a Photo',
                                 style: TextStyle(
-                                  color: Theme.of(context).accentColor,
+                                  color:
+                                      Theme.of(context).colorScheme.secondary,
                                 ),
                               ),
                             )
@@ -175,7 +176,7 @@ class _CreatePostState extends State<CreatePost> {
                     size: 25.0,
                   ),
                   iconSize: 30.0,
-                  color: Theme.of(context).accentColor,
+                  color: Theme.of(context).colorScheme.secondary,
                   onPressed: () => viewModel.getLocation(),
                 ),
               ),

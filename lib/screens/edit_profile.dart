@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:modal_progress_hud/modal_progress_hud.dart';
@@ -48,7 +47,7 @@ class _EditProfileState extends State<EditProfile> {
                     style: TextStyle(
                       fontWeight: FontWeight.w900,
                       fontSize: 15.0,
-                      color: Theme.of(context).accentColor,
+                      color: Theme.of(context).colorScheme.secondary,
                     ),
                   ),
                 ),

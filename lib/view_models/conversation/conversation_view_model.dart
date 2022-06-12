@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
@@ -48,7 +47,7 @@ class ConversationViewModel extends ChangeNotifier {
           );
 
     if (pickedFile != null) {
-      File croppedFile = await ImageCropper.cropImage(
+      File croppedFile = await ImageCropper().cropImage(
         sourcePath: pickedFile.path,
         aspectRatioPresets: [
           CropAspectRatioPreset.square,
@@ -59,7 +58,7 @@ class ConversationViewModel extends ChangeNotifier {
         ],
         androidUiSettings: AndroidUiSettings(
           toolbarTitle: 'Crop image',
-          toolbarColor: Theme.of(context).appBarTheme.color,
+          toolbarColor: Theme.of(context).appBarTheme.backgroundColor,
           toolbarWidgetColor: Theme.of(context).iconTheme.color,
           initAspectRatio: CropAspectRatioPreset.original,
           lockAspectRatio: false,

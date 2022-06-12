@@ -20,7 +20,7 @@ class Constants {
     fontFamily: 'Lato-Regular',
     backgroundColor: lightBG,
     primaryColor: lightPrimary,
-    accentColor: lightAccent,
+    secondaryHeaderColor: lightAccent,
     textSelectionTheme: TextSelectionThemeData(
       cursorColor: lightAccent,
     ),
@@ -31,13 +31,11 @@ class Constants {
     ),
     appBarTheme: AppBarTheme(
       elevation: 0,
-      textTheme: TextTheme(
-        headline6: TextStyle(
-          color: Colors.black,
-          fontSize: 20,
-          fontWeight: FontWeight.w600,
-          fontFamily: 'Lato-Regular',
-        ),
+      titleTextStyle: TextStyle(
+        color: Colors.black,
+        fontSize: 20,
+        fontWeight: FontWeight.w600,
+        fontFamily: 'Lato-Regular',
       ),
     ),
   );
@@ -47,7 +45,7 @@ class Constants {
     brightness: Brightness.dark,
     backgroundColor: darkBG,
     primaryColor: darkPrimary,
-    accentColor: darkAccent,
+    secondaryHeaderColor: darkAccent,
     scaffoldBackgroundColor: darkBG,
     textSelectionTheme: TextSelectionThemeData(
       cursorColor: darkAccent,
@@ -58,13 +56,11 @@ class Constants {
     ),
     appBarTheme: AppBarTheme(
       elevation: 0,
-      textTheme: TextTheme(
-        headline6: TextStyle(
-          color: lightBG,
-          fontSize: 20,
-          fontWeight: FontWeight.w600,
-          fontFamily: 'Lato-Regular',
-        ),
+      titleTextStyle: TextStyle(
+        color: lightBG,
+        fontSize: 20,
+        fontWeight: FontWeight.w600,
+        fontFamily: 'Lato-Regular',
       ),
     ),
   );

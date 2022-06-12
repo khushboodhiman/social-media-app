@@ -31,16 +31,16 @@ class _SettingState extends State<Setting> {
         padding: EdgeInsets.all(10.0),
         child: ListView(
           children: <Widget>[
-             ListTile(
-              title: Text(
-                "About",
-                style: TextStyle(
-                  fontWeight: FontWeight.w900,
+            ListTile(
+                title: Text(
+                  "About",
+                  style: TextStyle(
+                    fontWeight: FontWeight.w900,
+                  ),
                 ),
-              ),
-              subtitle: Text("A Fully Functional Social Media Application Made by CharlyKeleb"),
-              trailing: Icon(Icons.error)
-            ),
+                subtitle: Text(
+                    "A Fully Functional Social Media Application Made by CharlyKeleb"),
+                trailing: Icon(Icons.error)),
             Divider(),
             ListTile(
               title: Text(
@@ -56,7 +56,7 @@ class _SettingState extends State<Setting> {
                     notifier.toggleTheme();
                   },
                   value: notifier.dark,
-                  activeColor: Theme.of(context).accentColor,
+                  activeColor: Theme.of(context).colorScheme.secondary,
                 ),
               ),
             ),

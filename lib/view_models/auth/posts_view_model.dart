@@ -97,7 +97,7 @@ class PostsViewModel extends ChangeNotifier {
       PickedFile pickedFile = await picker.getImage(
         source: camera ? ImageSource.camera : ImageSource.gallery,
       );
-      File croppedFile = await ImageCropper.cropImage(
+      File croppedFile = await ImageCropper().cropImage(
         sourcePath: pickedFile.path,
         aspectRatioPresets: [
           CropAspectRatioPreset.square,
@@ -123,7 +123,7 @@ class PostsViewModel extends ChangeNotifier {
     } catch (e) {
       loading = false;
       notifyListeners();
-      showInSnackBar('Cancelled',context);
+      showInSnackBar('Cancelled', context);
     }
   }
 
@@ -163,14 +163,14 @@ class PostsViewModel extends ChangeNotifier {
       print(e);
       loading = false;
       resetPost();
-      showInSnackBar('Uploaded successfully!',context);
+      showInSnackBar('Uploaded successfully!', context);
       notifyListeners();
     }
   }
 
   uploadProfilePicture(BuildContext context) async {
     if (mediaUrl == null) {
-      showInSnackBar('Please select an image',context);
+      showInSnackBar('Please select an image', context);
     } else {
       try {
         loading = true;
@@ -184,7 +184,7 @@ class PostsViewModel extends ChangeNotifier {
       } catch (e) {
         print(e);
         loading = false;
-        showInSnackBar('Uploaded successfully!',context);
+        showInSnackBar('Uploaded successfully!', context);
         notifyListeners();
       }
     }
@@ -198,7 +198,7 @@ class PostsViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
-void showInSnackBar(String value,context) {
+  void showInSnackBar(String value, context) {
     ScaffoldMessenger.of(context).removeCurrentSnackBar();
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(value)));
   }

@@ -23,7 +23,7 @@ class Profile extends StatefulWidget {
   _ProfileState createState() => _ProfileState();
 }
 
-class _ProfileState extends State<Profile>  {
+class _ProfileState extends State<Profile> {
   User user;
   bool isLoading = false;
   int postCount = 0;
@@ -179,7 +179,8 @@ class _ProfileState extends State<Profile>  {
                                               children: [
                                                 Icon(Feather.settings,
                                                     color: Theme.of(context)
-                                                        .accentColor),
+                                                        .colorScheme
+                                                        .secondary),
                                                 Text(
                                                   'settings',
                                                   style:
@@ -418,7 +419,7 @@ class _ProfileState extends State<Profile>  {
               begin: Alignment.topRight,
               end: Alignment.bottomLeft,
               colors: [
-                Theme.of(context).accentColor,
+                Theme.of(context).colorScheme.secondary,
                 Color(0xff597FDB),
               ],
             ),

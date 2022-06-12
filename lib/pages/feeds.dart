@@ -91,7 +91,7 @@ class _TimelineState extends State<Timeline> {
             icon: Icon(
               CupertinoIcons.chat_bubble_2_fill,
               size: 30.0,
-              color: Theme.of(context).accentColor,
+              color: Theme.of(context).colorScheme.secondary,
             ),
             onPressed: () {
               Navigator.push(

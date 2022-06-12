@@ -32,7 +32,7 @@ class _ActivitiesState extends State<Activities> {
                 style: TextStyle(
                   fontSize: 13.0,
                   fontWeight: FontWeight.w900,
-                  color: Theme.of(context).accentColor,
+                  color: Theme.of(context).colorScheme.secondary,
                 ),
               ),
             ),

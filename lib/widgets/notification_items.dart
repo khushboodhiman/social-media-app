@@ -74,7 +74,7 @@ class _ActivityItemsState extends State<ActivityItems> {
     return Container(
       alignment: Alignment.centerRight,
       padding: EdgeInsets.only(right: 20.0),
-      color: Theme.of(context).accentColor,
+      color: Theme.of(context).colorScheme.secondary,
       child: Icon(
         CupertinoIcons.delete,
         color: Colors.white,

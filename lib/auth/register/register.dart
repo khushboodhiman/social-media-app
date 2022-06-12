@@ -53,7 +53,7 @@ class _RegisterState extends State<Register> {
                     'Login',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
-                      color: Theme.of(context).accentColor,
+                      color: Theme.of(context).colorScheme.secondary,
                     ),
                   ),
                 ),
@@ -150,7 +150,7 @@ class _RegisterState extends State<Register> {
                   ),
                 ),
                 backgroundColor: MaterialStateProperty.all<Color>(
-                    Theme.of(context).accentColor),
+                    Theme.of(context).colorScheme.secondary),
               ),
               child: Text(
                 'sign up'.toUpperCase(),

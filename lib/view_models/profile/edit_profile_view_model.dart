@@ -1,6 +1,5 @@
 import 'dart:io';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:image_cropper/image_cropper.dart';
 import 'package:image_picker/image_picker.dart';
@@ -55,13 +54,14 @@ class EditProfileViewModel extends ChangeNotifier {
     if (!form.validate()) {
       validate = true;
       notifyListeners();
-      showInSnackBar('Please fix the errors in red before submitting.',context);
+      showInSnackBar(
+          'Please fix the errors in red before submitting.', context);
     } else {
       try {
         loading = true;
         notifyListeners();
         bool success = await userService.updateProfile(
-        //  user: user,
+          //  user: user,
           image: image,
           username: username,
           bio: bio,
@@ -82,14 +82,14 @@ class EditProfileViewModel extends ChangeNotifier {
     }
   }
 
-  pickImage({bool camera = false,BuildContext context}) async {
+  pickImage({bool camera = false, BuildContext context}) async {
     loading = true;
     notifyListeners();
     try {
       PickedFile pickedFile = await picker.getImage(
         source: camera ? ImageSource.camera : ImageSource.gallery,
       );
-      File croppedFile = await ImageCropper.cropImage(
+      File croppedFile = await ImageCropper().cropImage(
         sourcePath: pickedFile.path,
         aspectRatioPresets: [
           CropAspectRatioPreset.square,
@@ -115,7 +115,7 @@ class EditProfileViewModel extends ChangeNotifier {
     } catch (e) {
       loading = false;
       notifyListeners();
-      showInSnackBar('Cancelled',context);
+      showInSnackBar('Cancelled', context);
     }
   }
 
@@ -124,7 +124,7 @@ class EditProfileViewModel extends ChangeNotifier {
     notifyListeners();
   }
 
- void showInSnackBar(String value,context) {
+  void showInSnackBar(String value, context) {
     ScaffoldMessenger.of(context).removeCurrentSnackBar();
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Text(value)));
   }

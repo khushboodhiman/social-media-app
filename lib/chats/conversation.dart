@@ -127,7 +127,7 @@ class _ConversationState extends State<Conversation> {
                         IconButton(
                           icon: Icon(
                             CupertinoIcons.photo_on_rectangle,
-                            color: Theme.of(context).accentColor,
+                            color: Theme.of(context).colorScheme.secondary,
                           ),
                           onPressed: () => showPhotoOptions(viewModel, user),
                         ),
@@ -156,7 +156,7 @@ class _ConversationState extends State<Conversation> {
                         IconButton(
                           icon: Icon(
                             Feather.send,
-                            color: Theme.of(context).accentColor,
+                            color: Theme.of(context).colorScheme.secondary,
                           ),
                           onPressed: () {
                             if (messageController.text.isNotEmpty) {

@@ -56,8 +56,7 @@ class _PasswordFormBuilderState extends State<PasswordFormBuilder> {
             child: Container(
               child: Theme(
                 data: ThemeData(
-                  primaryColor: Theme.of(context).accentColor,
-                  accentColor: Theme.of(context).accentColor,
+                  primaryColor: Theme.of(context).colorScheme.secondary,
                 ),
                 child: TextFormField(
                   initialValue: widget.initialValue,
@@ -158,7 +157,7 @@ class _PasswordFormBuilderState extends State<PasswordFormBuilder> {
         Radius.circular(30.0),
       ),
       borderSide: BorderSide(
-        color: Theme.of(context).accentColor,
+        color: Theme.of(context).colorScheme.secondary,
         width: 1.0,
       ),
     );
