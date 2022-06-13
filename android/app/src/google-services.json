@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "274315704992",
+    "project_id": "social-eyez-f39bc",
+    "storage_bucket": "social-eyez-f39bc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:274315704992:android:a914500399a8785f5da7c5",
+        "android_client_info": {
+          "package_name": "com.example.social_media_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "274315704992-empcokij99n00sqa71869o78rjvhsl6k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUVj-MVZW68H_2EIrSkGfggcaK9DW_OL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "274315704992-empcokij99n00sqa71869o78rjvhsl6k.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "274315704992-aj0lbpfl1o36ib619tri9vrfe6h87208.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.mikkyboy.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
